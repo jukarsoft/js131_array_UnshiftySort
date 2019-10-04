@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrays - unshift sort push</title>
+
+
+	
+	<script type="text/javascript">
+		//unshift incluye un elemento al principio del array el resto se desplaza
+		//push incluye al final del array
+		//sort funcion de clasificación arrays
+		var bucle=5;
+		var lista = new Array();
+
+		for (i=0;i<bucle; i++) {
+			lista [i] = prompt('introduce un número para el array lista');
+		}
+		document.write(`1-lista introducida ${lista}`);
+		document.write('<br>');
+		//inserta elementos con el método unshift que el primero que entra queda el último
+		var lista2 = new Array();
+		for (i=0;i<bucle; i++) {
+			var temp;
+			lista2.unshift(prompt('introduce un número usando metodo unshift'));
+		}
+		document.write(`2-lista introducida utilizando el método unshift ${lista2}`);
+		document.write('<br>');
+		//clasificación de un array numérica
+		var ordenado=lista2.sort(function(a, b){return a - b});
+		document.write(`3-lista ordenada despues de un sort numericamente ${ordenado}`);
+		document.write('<br>');
+		//array utilizando funcion push - de manera que son insertados quedando en la posicion conforme entran
+		var lista3 = new Array();
+		for (i=0;i<bucle; i++) {
+			var temp;
+			lista3.push(prompt('introduce un número usando el método push'));
+		}
+		document.write(`4-lista introducidad con el método push ${lista3}`);
+		document.write('<br>');
+		document.write('muestra usando el método join <br>');
+		document.write(lista.join(','));
+		document.write('<br>');
+		document.write(lista2.join(','));
+		document.write('<br>');
+		document.write(lista3.join(','));
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
